@@ -143,4 +143,4 @@ To contribute, please follow these steps:
 
 If you liked the project, I will appreciate if you leave a star. 🌟😊
 
-Made by <a href="https://esenwa.netlify.app/">Michaeł Esenwa</a>
+Made by <a href="https://github.com/kcmikee">Michaeł Esenwa</a>
