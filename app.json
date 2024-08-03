@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Starter Base",
-    "slug": "starter-base",
+    "slug": "sycamore-sprout",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -30,6 +30,15 @@
     "plugins": ["expo-router"],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "564d9bcd-0cf4-46f6-a9ee-ac75d67bbd23"
+      }
+    },
+    "owner": "panera_africa"
   }
 }

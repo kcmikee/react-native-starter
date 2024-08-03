@@ -18,6 +18,7 @@ import ModalScreen from "~/components/shared/modal";
 import PopoverScreen from "~/components/shared/popover";
 import ProgressScreen from "~/components/shared/progress";
 import RadioGroupScreen from "~/components/shared/radio-group";
+import SelectScreen from "~/components/shared/select";
 import SkeletonScreen from "~/components/shared/skeleton";
 import TableScreen from "~/components/shared/table";
 import TooltipScreen from "~/components/shared/tooltip";
@@ -26,6 +27,9 @@ import TypographyScreen from "~/components/shared/typography";
 import { ThemedText } from "~/components/ThemedText";
 import { ThemedView } from "~/components/ThemedView";
 import { ThemeToggle } from "~/components/ThemeToggle";
+import { Input } from "~/components/ui";
+import InputScreen from "~/components/shared/input";
+import TextAreaScreen from "~/components/shared/textarea";
 
 export default function TabTwoScreen() {
   return (
@@ -41,7 +45,7 @@ export default function TabTwoScreen() {
       <ThemedText>
         This app includes example code to help you get started.
       </ThemedText>
-      <ScrollView>
+      <ScrollView className="gap-y-2">
         <Collapsible title="File-based routing">
           <ThemedText>
             This app has two screens:{" "}
@@ -144,6 +148,19 @@ export default function TabTwoScreen() {
         <Collapsible title="Badges">
           <BadgeScreen />
         </Collapsible>
+
+        <Collapsible title="Input text">
+          <InputScreen />
+        </Collapsible>
+
+        <Collapsible title="Textarea">
+          <TextAreaScreen />
+        </Collapsible>
+
+        <Collapsible title="Select">
+          <SelectScreen />
+        </Collapsible>
+
         <Collapsible title="Button">
           <ButtonScreen />
         </Collapsible>
