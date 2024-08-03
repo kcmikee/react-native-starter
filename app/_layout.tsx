@@ -9,8 +9,8 @@ import { Platform } from "react-native";
 import { NAV_THEME } from "~/lib/constants";
 import { useColorScheme } from "~/lib/useColorScheme";
 import { PortalHost } from "@rn-primitives/portal";
-import { ThemeToggle } from "~/components/ThemeToggle";
 import Toast from "react-native-toast-message";
+import "../../node_modules/.cache/nativewind/global.css";
 
 const LIGHT_THEME: Theme = {
   dark: false,
