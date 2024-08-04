@@ -27,11 +27,28 @@ import TypographyScreen from "~/components/shared/typography";
 import { ThemedText } from "~/components/ThemedText";
 import { ThemedView } from "~/components/ThemedView";
 import { ThemeToggle } from "~/components/ThemeToggle";
-import { Input } from "~/components/ui";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+  Input,
+  Switch,
+} from "~/components/ui";
 import InputScreen from "~/components/shared/input";
 import TextAreaScreen from "~/components/shared/textarea";
+import DocumentPicker from "~/components/DocumentPicker";
+import { useState } from "react";
+import OTPInput from "~/components/OTPContainer";
 
 export default function TabTwoScreen() {
+  const [otp, setOTP] = useState<string>("");
+
+  const handleOTPChange = (otp: string) => {
+    setOTP(otp);
+  };
+
+  const GITHUB_AVATAR_URI =
+    "https://i.pinimg.com/originals/ef/a2/8d/efa28d18a04e7fa40ed49eeb0ab660db.jpg";
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: "#D0D0D0", dark: "#353636" }}
@@ -65,6 +82,24 @@ export default function TabTwoScreen() {
           <ExternalLink href="https://docs.expo.dev/router/introduction">
             <ThemedText type="link">Learn more</ThemedText>
           </ExternalLink>
+        </Collapsible>
+        <Collapsible title="Avatar">
+          <Avatar
+            alt="Rick Sanchez's Avatar"
+            className="w-12 h-12 border-2 border-green-500"
+          >
+            <AvatarImage source={{ uri: GITHUB_AVATAR_URI }} />
+            <AvatarFallback>
+              <ThemedText>RS</ThemedText>
+            </AvatarFallback>
+          </Avatar>
+        </Collapsible>
+        <Collapsible title="Document picker">
+          {/* @ts-ignore */}
+          <DocumentPicker />
+        </Collapsible>
+        <Collapsible title="OTP">
+          <OTPInput length={6} onOTPChange={handleOTPChange} />
         </Collapsible>
         {/* <Collapsible title="Android, iOS, and web support">
           <ThemedText>
@@ -204,6 +239,9 @@ export default function TabTwoScreen() {
 
         <Collapsible title="Skeleton">
           <SkeletonScreen />
+        </Collapsible>
+        <Collapsible title="Switch">
+          <Switch checked={false} id="fgg" onCheckedChange={() => {}} />
         </Collapsible>
         <Collapsible title="Tooltip">
           <TooltipScreen />
