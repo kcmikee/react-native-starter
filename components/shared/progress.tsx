@@ -15,7 +15,11 @@ export default function ProgressScreen() {
   return (
     <View className="items-center justify-center flex-1 gap-12 p-6">
       <View className="items-center w-full gap-8">
-        <Progress value={progress} className="web:w-[60%]" />
+        <Progress
+          value={progress}
+          className="web:w-[60%]"
+          indicatorClassName="bg-green-500"
+        />
         <Button variant="ghost" onPress={onPress}>
           <Text>Randomize</Text>
         </Button>
